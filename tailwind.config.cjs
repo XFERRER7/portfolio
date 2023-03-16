@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "header": "url('bg-header.jpg')",
+        "header": "url('/bg-header.jpg')",
         "text": "linear-gradient(to right, #ffffff, #61dafb)"
       },
       colors: {

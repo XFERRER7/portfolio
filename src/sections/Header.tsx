@@ -13,7 +13,6 @@ export const Header = () => {
     <div 
      className='w-full h-screen bg-header bg-cover font-roboto px-10 flex flex-col 
      pb-2 text-white'
-     
      >
 
       <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen}/>

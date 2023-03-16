@@ -10,7 +10,11 @@ export const Header = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
   return (
-    <div className='w-full h-screen bg-header bg-cover font-roboto px-10 flex flex-col pb-2 text-white'>
+    <div 
+     className='w-full h-screen bg-header bg-cover font-roboto px-10 flex flex-col 
+     pb-2 text-white'
+     
+     >
 
       <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen}/>
 

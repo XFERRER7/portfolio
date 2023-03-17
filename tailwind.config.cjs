@@ -28,9 +28,8 @@ module.exports = {
           '50%': {
             opacity: ".5",
           }
-        }
+        },
       },
-      //create animation eletron effect
       animation: {
         eletron: 'eletron 8s ease-in-out',
         node: 'node 8s ease-in-out',

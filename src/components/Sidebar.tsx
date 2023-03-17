@@ -10,13 +10,15 @@ interface ISidebarProps {
 export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
   return (
     <div className={`
-    ${sidebarIsOpen ? 'fixed' : 'hidden'} top-0 right-0
-    w-full mt-20 md:hidden
-    `}>
+    ${sidebarIsOpen ? 'absolute' : 'hidden'} top-0
+    w-[calc(100%-5rem)] mt-20 md:hidden left-1/2 transform -translate-x-1/2
+    `}
+    >
       <div className="
-      w-full h-full border-b border-t flex flex-col 
-      justify-center gap-3 py-5 px-5 text-xl bg-[#190228]
-      ">
+      w-full h-full border-b border-t flex flex-col
+      justify-center gap-3 py-5 px-5 text-xl bg-[#000000]
+      "
+      >
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faBriefcase} />

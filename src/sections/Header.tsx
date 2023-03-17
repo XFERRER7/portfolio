@@ -10,20 +10,20 @@ export const Header = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
   return (
-    <div 
-     className='w-full h-screen bg-[#000000] 
+    <div
+      className='w-full h-screen bg-[#000000] 
      bg-cover font-roboto px-10 flex flex-col border-b
      pb-2 text-white'
-     >
+    >
 
-      <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen}/>
+      <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen} />
 
       <main className='
       flex-col py-16
       flex-1 flex md:flex-row md:py-0 items-center md:mt-0 justify-center gap-20
       '>
-      <ReactLogo />       
-        <Sidebar sidebarIsOpen={sidebarIsOpen}/>
+        <ReactLogo />
+        <Sidebar sidebarIsOpen={sidebarIsOpen} />
         <div className='flex flex-col gap-4'>
           <h1 className='
           text-5xl text-center
@@ -51,7 +51,7 @@ export const Header = () => {
               }}
               onInit={(typewriter) => {
                 typewriter.typeString('React')
-                .start()
+                  .start()
               }}
             />
             <span>|</span>
@@ -63,7 +63,7 @@ export const Header = () => {
               }}
               onInit={(typewriter) => {
                 typewriter.typeString('Node')
-                .start()
+                  .start()
               }}
             />
           </span>

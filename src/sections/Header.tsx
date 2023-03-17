@@ -9,23 +9,20 @@ export const Header = () => {
 
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
-  //classes tailwind para bg gradient 
-  
-
   return (
     <div 
-     className='w-full md:h-screen bg-gradient-to-b from-[#000000] to-[#0a0a0a] 
-     bg-cover font-roboto px-10 flex flex-col 
+     className='w-full h-screen bg-[#000000] 
+     bg-cover font-roboto px-10 flex flex-col border-b
      pb-2 text-white'
      >
 
       <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen}/>
 
       <main className='
-      flex-col gap-10 py-16
-      flex-1 flex md:flex-row md:py-0 items-center md:mt-0 md:justify-center md:gap-20
+      flex-col py-16
+      flex-1 flex md:flex-row md:py-0 items-center md:mt-0 justify-center gap-20
       '>
-      <ReactLogo />
+      <ReactLogo />       
         <Sidebar sidebarIsOpen={sidebarIsOpen}/>
         <div className='flex flex-col gap-4'>
           <h1 className='

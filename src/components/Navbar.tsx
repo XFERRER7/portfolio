@@ -1,3 +1,6 @@
+//import x from awsome icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faX } from '@fortawesome/free-solid-svg-icons'
 
 interface INavbarProps {
   setSidebarIsOpen: (value: boolean) => void
@@ -41,13 +44,19 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       flex
       md:hidden flex-col gap-2
       "
-      onClick={() => {
-        setSidebarIsOpen(true)
-      }}
+        onClick={() => {
+          setSidebarIsOpen(!sidebarIsOpen)
+        }}
       >
-        <div className="w-10 h-1 rounded-lg bg-white"></div>
-        <div className="w-10 h-1 rounded-lg bg-white"></div>
-        <div className="w-10 h-1 rounded-lg bg-white"></div>
+        {
+          sidebarIsOpen ?
+            <FontAwesomeIcon icon={faX} size="2xl" /> :
+            <>
+              <div className="w-10 h-1 rounded-lg bg-white"></div>
+              <div className="w-10 h-1 rounded-lg bg-white"></div>
+              <div className="w-10 h-1 rounded-lg bg-white"></div>
+            </>
+        }
       </div>
 
     </div>

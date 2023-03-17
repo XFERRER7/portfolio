@@ -32,8 +32,8 @@ module.exports = {
       },
       //create animation eletron effect
       animation: {
-        eletron: 'eletron 3s ease-in-out infinite',
-        node: 'node 3s ease-in-out infinite',
+        eletron: 'eletron 8s ease-in-out',
+        node: 'node 8s ease-in-out',
       },
     },
   },

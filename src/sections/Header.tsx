@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <div 
-     className='w-full h-screen bg-header bg-cover font-roboto px-10 flex flex-col 
+     className='w-full md:h-screen h-[70vh] bg-black bg-cover font-roboto px-10 flex flex-col 
      pb-2 text-white'
      >
 

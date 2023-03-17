@@ -11,24 +11,24 @@ export const Header = () => {
 
   return (
     <div 
-     className='w-full md:h-screen h-[70vh] bg-black bg-cover font-roboto px-10 flex flex-col 
+     className='w-full md:h-screen bg-black bg-cover font-roboto px-10 flex flex-col 
      pb-2 text-white'
      >
 
       <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen}/>
 
       <main className='
-      flex-col gap-14 mt-20
-      flex-1 flex md:flex-row items-center md:mt-0 md:justify-center md:gap-20
+      flex-col gap-10 py-10
+      flex-1 flex md:flex-row md:py-0 items-center md:mt-0 md:justify-center md:gap-20
       '>
       <ReactLogo />
         <Sidebar sidebarIsOpen={sidebarIsOpen}/>
         <div className='flex flex-col gap-4'>
           <h1 className='
           text-5xl text-center
-          md:text-7xl md:text-left font-open tracking-wide upp
-          '>Hi, I'm
-            <span className='text-primary'
+          md:text-7xl font-open tracking-wide upp
+          '><span>Hi, I'm </span>
+            <span className='text-primary text-center'
               style={{
                 backgroundClip: 'text',
                 backgroundImage: 'linear-gradient(to right, #ffffff, #61dafb)',

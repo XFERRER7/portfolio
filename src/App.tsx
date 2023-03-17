@@ -2,6 +2,7 @@ import { Header } from "./sections/Header"
 import { useEffect } from 'react'
 import "aos/dist/aos.css"
 import Aos from "aos"
+import { About } from "./sections/About"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Header />
+      <About />
     </>
   )
 }

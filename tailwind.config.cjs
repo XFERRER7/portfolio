@@ -29,10 +29,22 @@ module.exports = {
             opacity: ".5",
           }
         },
+        rgb: {
+          '0%': {
+            backgroundPosition: '0% 50%'
+          },
+          '50%': {
+            backgroundPosition: '100% 50%'
+          },
+          '100%': {
+            backgroundPosition: '0% 50%'
+          }
+        }
       },
       animation: {
         eletron: 'eletron 8s ease-in-out',
         node: 'node 8s ease-in-out',
+        rgb: 'rgb 6s linear infinite'
       },
     },
   },

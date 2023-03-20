@@ -1,21 +1,18 @@
-import { CardTechnology } from "../elements/CardTechnology"
+import { TechnologyCard } from "../elements/TechnologyCard"
 import { faCode } from "@fortawesome/free-solid-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { faHandshake } from "@fortawesome/free-solid-svg-icons"
+import { Title } from "../elements/Title"
 
 export const About = () => {
   return (
     <div className='
-      
-       w-full bg-[#000000]
-      px-10 flex flex-col border-b py-16 gap-14
+      w-full bg-gradient-to-t from-[#1a0a36] via-[#120625] to-[#0f051f]
+      px-10 flex flex-col py-16 gap-14 border-b
      '>
 
       <div className="w-full flex flex-col gap-10 items-center">
-        <h1 className="
-      font-poppins text-white text-5xl text-center md:text-6xl font-bold
-      ">Visão geral
-        </h1>
+        <Title title="Visão geral"/>
         <span className="
           w-full
           text-md text-gray-300 md:w-3/5
@@ -36,21 +33,21 @@ export const About = () => {
       flex-col gap-10
       w-full md:h-96 py-6 flex md:flex-row md:justify-around
       ">
-        <CardTechnology
+        <TechnologyCard
           icon={faCode}
           title="Front-end Developer"
           description="Meu conhecimento em ReactJS, permite criar interfaces incríveis e entregar
         soluções personalizadas para as necessidades do meu cliente. Meu foco é sempre
         fornecer códigos limpos, bem estruturados e fáceis de entender."
         />
-        <CardTechnology
+        <TechnologyCard
           icon={faDatabase}
           title="Back-end Developer"
           description="Com minha base sólida em Java e Spring Boot, rapidamente me adaptei 
           ao Node.js, trabalhando em projetos pessoais e aplicando as habilidades adquiridas para alcançar resultados 
           eficazes e eficientes."
         />
-        <CardTechnology
+        <TechnologyCard
           icon={faHandshake}
           title="Cooperativo"
           description="Possuo uma forte ética de trabalho em equipe e uma atitude colaborativa, 

@@ -11,9 +11,9 @@ export const Header = () => {
 
   return (
     <div
-      className='w-full h-screen bg-[#000000] 
-     bg-cover font-roboto px-10 flex flex-col border-b
-     pb-2 text-white'
+      className='w-full h-screen bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f] 
+     bg-cover font-roboto px-10 flex flex-col
+     pb-2 text-white border-b'
     >
 
       <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen} />

@@ -10,7 +10,7 @@ export const Header = () => {
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
   return (
-    <div
+    <div id='home'
       className='w-full h-screen bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f] 
      bg-cover font-roboto px-10 flex flex-col
      pb-2 text-white border-b'

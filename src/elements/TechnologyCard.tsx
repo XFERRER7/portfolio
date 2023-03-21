@@ -11,8 +11,8 @@ export const TechnologyCard = ({ title, description, icon }: ICardTechnologyProp
   return (
     <div
       className="
-    w-full h-full text-center bg-gradient-to-r from-[#ffffff] to-[#61dafb]
-    md:w-[21rem] md:h-80 md:text-left text-white rounded-lg p-[3px]
+    w-full h-full text-center 
+    md:w-[21rem] md:h-80 md:text-left text-white rounded-lg
     "
       data-aos="fade-right" data-aos-once="true"
     >

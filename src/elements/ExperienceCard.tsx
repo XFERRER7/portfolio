@@ -1,59 +1,36 @@
-import { useState } from 'react'
+import { TextGradient } from './TextGradient'
+import img1 from '/work01.jpg'
 
 export const ExperienceCard = () => {
-
-  const [isHovered, setIsHovered] = useState(false)
-
   return (
-    <div className={`font-poppins rgb w-full md:w-80 h-80 md:h-full 
-    ${isHovered ? 'bg-white' : 'bg-gradient-to-r from-[#61dafb] to-white'}
-     
-    rounded-md text-white p-[2px]`}>
+    <div className='font-poppins w-full md:w-80 h-80 md:h-full group 
+    relative overflow-hidden rounded-xl'>
 
-      <div
-        className="
-      w-full h-full flex flex-col gap-5 rounded-md bg-cover bg-center
-      "
-        style={{
-          backgroundImage: "url('work01.jpg')",
-        }}
-      >
+      <div className='w-full h-full group-hover:bg-black/70 absolute z-40 
+      transition-all duration-300'></div>
 
-        <div
-          onMouseEnter={() => {
-            setIsHovered(true)
-          }}
-          onMouseLeave={() => {
-            setIsHovered(false)
-          }}
-          className={`
-          w-full h-full ${isHovered ? 'bg-primary' : 'bg-[#000000d2]'} 
-          transition-colors  rounded-md flex flex-col gap-5 
-          items-center justify-center`}
+      <img src={img1} alt="img1" className='w-full h-full group-hover:scale-125 transition-all 
+      duration-500 object-cover object-center'/>
 
-        >
-          {
-            isHovered ?
-              <>
-                <h1
-                  className='font-bold text-xl text-center mx-1'>
-                  Landing page desenvolvida utlizando HTML, CSS e JS
-                </h1>
-                <button
-                  className='py-2 px-3 border bg-white text-primary font-bold rounded'>
-                  Visitar website
-                </button>
-              </>
-              :
-              <>
-                <h1 className={`font-bold text-2xl ${isHovered ? 'hidden' : ''}`}>Marmoraria Decore</h1>
-                <span className={`font-semibold text-gray-300 ${isHovered ? 'hidden' : ''}`}>2023 - 03</span>
-              </>
-          }
-
-        </div>
-
+      <div className='absolute bottom-full w-full group-hover:left-1/2 group-hover:top-20
+      group-hover:-translate-x-1/2
+      transition-all 
+      duration-700 z-50'>
+        <TextGradient
+          text='Landing page desenvolvida utlizando HTML, CSS e JS'
+          className='text-center text-white font-bold mx-auto w-full'
+        />
       </div>
+      <div className='absolute bottom-full group-hover:left-1/2 group-hover:top-1/2 
+      group-hover:translate-x-[-50%] group-hover:translate-y-[-50%] 
+      transition-all duration-700 z-50'>
+        <button
+          className='py-2 px-3 bg-primary text-white font-bold rounded'>
+          Visitar website
+          
+        </button>
+      </div>
+
 
     </div>
   )

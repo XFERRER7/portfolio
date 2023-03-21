@@ -3,7 +3,7 @@ import { Title } from "../elements/Title"
 
 export const Work = () => {
   return (
-    <div className="w-full bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f]
+    <div id="work" className="w-full bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f]
     px-10 flex flex-col py-16 gap-14 border-b">
 
       <div className="w-full flex flex-col gap-10 items-center">

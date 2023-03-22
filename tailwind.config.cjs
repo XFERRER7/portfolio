@@ -10,6 +10,10 @@ module.exports = {
         "header": "url('/bg-header.jpg')",
         "text": "linear-gradient(to right, #ffffff, #61dafb)"
       },
+      //create a gradient background with 90deg, #a230ad, #6b00d7, #3e00b3
+      backgroundImage: {
+        gradient: 'linear-gradient(90deg, #a230ad, #6b00d7, #3e00b3)'
+      },
       colors: {
         primary: "#6d24ff"
       },

@@ -5,7 +5,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.active {
-  background: linear-gradient(90deg, #a230ad, #6b00d7, #3e00b3);
-  color: #ffffff;
-}

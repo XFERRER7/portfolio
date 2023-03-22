@@ -33,24 +33,23 @@ module.exports = {
             opacity: ".5",
           }
         },
-        rgb: {
-          '0%': {
-            backgroundPosition: '0% 50%'
+        input: {
+          from: {
+            borderColor: '#6d24ff',
           },
-          '50%': {
-            backgroundPosition: '100% 50%'
-          },
-          '100%': {
-            backgroundPosition: '0% 50%'
+          to: {
+            borderColor: '#ffffff',
           }
         }
       },
       animation: {
         eletron: 'eletron 8s ease-in-out',
         node: 'node 8s ease-in-out',
-        rgb: 'rgb 6s linear infinite'
+        input: 'input 1s ease-out forwards'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar'),
+  ],
 }

@@ -11,7 +11,7 @@ export const FloatingBar = () => {
   const [active, setActive] = useState<'home' | 'about' | 'work' | 'contact'>('home');
 
   return (
-    <nav className='fixed bottom-5 md:bottom-8 w-full overflow-hidden z-50'>
+    <nav className='fixed bottom-5 md:bottom-3 w-full overflow-hidden z-50'>
       <div className='container mx-auto'>
         <div className='w-[calc(100%-15px)] bg-black/20 h-16 backdrop-blur-2xl rounded-full 
         max-w-[450px] mx-auto flex justify-around items-center text-2xl text-white'>
@@ -29,7 +29,7 @@ export const FloatingBar = () => {
             onClick={() => setActive('about')}
             className={`${active == 'about' ? 'bg-gradient' : ''}  selection:select-none cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
-            spy={true}>
+            spy={true}>   
             <FontAwesomeIcon icon={faUserCircle} />
           </Link>
           <Link

@@ -3,14 +3,18 @@ import { ReactLogo } from '../elements/ReactLogo'
 import { NodeLogo } from '../elements/NodeLogo'
 import Typewriter from 'typewriter-effect'
 import { Sidebar } from '../components/Sidebar'
-import { useState } from 'react'
+import { MutableRefObject, useState } from 'react'
 
-export const Header = () => {
+interface IHeaderProps {
+  ref: React.MutableRefObject<null>
+}
+
+export const Header = ({ref}: IHeaderProps) => {
 
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
   return (
-    <div id='home'
+    <div id='home' ref={ref}
       className='w-full h-screen bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f] 
      bg-cover font-roboto px-10 flex flex-col
      pb-2 text-white border-b'

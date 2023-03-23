@@ -4,7 +4,11 @@ import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { faHandshake } from "@fortawesome/free-solid-svg-icons"
 import { Title } from "../elements/Title"
 
-export const About = () => {
+interface IAboutProps {
+  ref: React.MutableRefObject<null>
+}
+
+export const About = ({ref}: IAboutProps) => {
   return (
     <div id="about" className='
       w-full bg-gradient-to-t from-[#1a0a36] via-[#120625] to-[#0f051f]

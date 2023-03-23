@@ -2,7 +2,11 @@ import { ExperienceCard } from "../elements/ExperienceCard"
 import { Title } from "../elements/Title"
 import img1 from '/work01.jpg'
 
-export const Work = () => {
+interface IWorkProps {
+  ref: React.MutableRefObject<null>
+}
+
+export const Work = ({ref}: IWorkProps) => {
   return (
     <div id="work" className="w-full bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f]
     px-10 flex flex-col py-16 gap-14 border-b">

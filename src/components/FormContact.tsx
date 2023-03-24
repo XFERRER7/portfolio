@@ -3,6 +3,7 @@ import { Input } from '../elements/Input'
 import emailjs from '@emailjs/browser'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import load from '/load.png'
 
 interface IFormData {
   nome: string
@@ -17,14 +18,18 @@ export const FormContact = () => {
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (formData: IFormData) => {
+
+    setLoading(true)
 
     if (name == '' || email == '' || subject == '' || message == '') {
       toast.error('Preencha todos os campos', {
         closeOnClick: true,
         pauseOnHover: true,
       })
+      setLoading(false)
       return
     }
 
@@ -45,12 +50,13 @@ export const FormContact = () => {
         setEmail('')
         setSubject('')
         setMessage('')
+        setLoading(false)
       }, (error) => {
         toast.error('Erro ao enviar email', {
           closeOnClick: true,
           pauseOnHover: true,
         })
-        console.log(error.text);
+        setLoading(false)
       })
   }
 
@@ -88,7 +94,15 @@ export const FormContact = () => {
             mensagem: message
           })
         }} className='w-full md:w-56 h-12 rounded bg-primary text-white font-semibold 
-        font-poppins'>Send</button>
+        font-poppins flex items-center gap-3 justify-center'
+        disabled={loading ? true : false}
+        >
+          
+          {
+            loading ? <img src={load} alt="load" className='h-10 -10 animate-spin '/> : 'Send'
+          }
+          
+        </button>
       </div>
       <ToastContainer />
     </form>

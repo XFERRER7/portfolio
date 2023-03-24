@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import nodemailer from 'nodemailer';
 import { Input } from '../elements/Input'
 
 interface IFormData {
@@ -18,30 +17,7 @@ export const FormContact = () => {
   const [message, setMessage] = useState('')
 
   const handleSubmit = async (formData: IFormData) => {
-    // Crie um objeto de transporte SMTP
-    let transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      auth: {
-        user: 'aledev.js@gmail.com', // Seu e-mail
-        pass: '24072020' // Sua senha
-      }
-    });
-
-    // Crie um objeto de e-mail
-    let mailOptions = {
-      from: formData.email,
-      to: 'aledev.js@gmail.com',
-      subject: formData.subject,
-      text: formData.mensagem
-    };
-
-    // Envie o e-mail usando o objeto de transporte SMTP
-    await transporter.sendMail(mailOptions);
-
-    // Exiba uma mensagem de sucesso
-    alert('E-mail enviado com sucesso!');
+    alert('Formulário enviado com sucesso!')
   }
 
 

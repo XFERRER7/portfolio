@@ -3,20 +3,22 @@ import { faCode } from "@fortawesome/free-solid-svg-icons"
 import { faDatabase } from "@fortawesome/free-solid-svg-icons"
 import { faHandshake } from "@fortawesome/free-solid-svg-icons"
 import { Title } from "../elements/Title"
+import { IMainComponentProps } from "../types"
+import { Waypoint } from "react-waypoint"
 
-interface IAboutProps {
-  ref: React.MutableRefObject<null>
-}
-
-export const About = ({ref}: IAboutProps) => {
+export const About = ({ onAction }: IMainComponentProps) => {
   return (
     <div id="about" className='
       w-full bg-gradient-to-t from-[#1a0a36] via-[#120625] to-[#0f051f]
       px-10 flex flex-col py-16 gap-14 border-b
      '>
-
+       <Waypoint
+        onEnter={() => {
+          onAction("About");
+        }}
+      />
       <div className="w-full flex flex-col gap-10 items-center">
-        <Title title="Visão geral"/>
+        <Title title="Visão geral" />
         <span className="
           w-full
           text-md text-gray-300 md:w-3/5

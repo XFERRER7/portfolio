@@ -21,18 +21,18 @@ export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
       >
 
         <div className='flex gap-2 items-center'>
-          <FontAwesomeIcon icon={faBriefcase} />
-          <span className="h-10 px-2 text-white flex items-center">Work</span>
+          <FontAwesomeIcon icon={faUserCircle} />
+          <a href='#about' className="h-10 px-2 text-white flex items-center">About</a>
         </div>
 
         <div className='flex gap-2 items-center'>
-          <FontAwesomeIcon icon={faUserCircle} />
-          <span className="h-10 px-2 text-white flex items-center">About</span>
+          <FontAwesomeIcon icon={faBriefcase} />
+          <a href='#work' className="h-10 px-2 text-white flex items-center">Work</a>
         </div>
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faPhone} />
-          <span className="h-10 px-2 text-white flex items-center">Contact</span>
+          <a href='#contact' className="h-10 px-2 text-white flex items-center">Contact</a>
         </div>
 
 

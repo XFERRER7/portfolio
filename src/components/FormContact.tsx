@@ -58,7 +58,7 @@ export const FormContact = () => {
     <form className='w-full h-full rounded-sm flex flex-col 
     gap-5 items-center md:p-10 relative'>
 
-      <h1 className='text-2xl text-gray-300 text-center font-semibold'>Send me an email</h1>
+      <h1 className='text-2xl text-gray-300 text-center font-semibold'>Let's work together?</h1>
 
       <div className='w-full h-12 flex justify-between gap-2'>
         <Input value={name} placeholder='Name' onchange={(e) => setName(e.target.value)} />

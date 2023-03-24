@@ -3,23 +3,25 @@ import { ReactLogo } from '../elements/ReactLogo'
 import { NodeLogo } from '../elements/NodeLogo'
 import Typewriter from 'typewriter-effect'
 import { Sidebar } from '../components/Sidebar'
-import { MutableRefObject, useState } from 'react'
+import { useState } from 'react'
+import { IMainComponentProps } from '../types'
+import { Waypoint } from "react-waypoint";
 
-interface IHeaderProps {
-  ref: React.MutableRefObject<null>
-}
-
-export const Header = ({ref}: IHeaderProps) => {
+export const Header = ({ onAction }: IMainComponentProps) => {
 
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
   return (
-    <div id='home' ref={ref}
+    <div id='header'
       className='w-full h-screen bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f] 
      bg-cover font-roboto px-10 flex flex-col
      pb-2 text-white border-b'
     >
-
+      <Waypoint
+        onEnter={() => {
+          onAction("Header");
+        }}
+      />
       <Navbar sidebarIsOpen={sidebarIsOpen} setSidebarIsOpen={setSidebarIsOpen} />
 
       <main className='

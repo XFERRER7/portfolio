@@ -4,11 +4,19 @@ import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-export const FloatingBar = () => {
+interface IFloatingBarProps {
+  currentSection: string
+}
 
-  const [active, setActive] = useState<'home' | 'about' | 'work' | 'contact'>('home');
+export const FloatingBar = ({ currentSection }: IFloatingBarProps) => {
+
+  const [active, setActive] = useState<'Header' | 'About' | 'Work' | 'Contact'>('Header');
+
+  useEffect(() => {
+    setActive(currentSection as 'Header' | 'About' | 'Work' | 'Contact')
+  }, [currentSection])
 
   return (
     <nav className='fixed bottom-5 md:bottom-3 w-full overflow-hidden z-50'>
@@ -17,33 +25,31 @@ export const FloatingBar = () => {
         max-w-[450px] mx-auto flex justify-around items-center text-2xl text-white'>
 
           <Link
-            to='home'
-            onClick={() => setActive('home')}
-            className={`${active == 'home' ? 'bg-gradient' : ''}  cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
+            to='header'
+            className={`
+            ${active == 'Header' ? 'bg-gradient' : ''}
+              cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
             spy={true}>
             <FontAwesomeIcon icon={faHome} />
           </Link>
           <Link
             to='about'
-            onClick={() => setActive('about')}
-            className={`${active == 'about' ? 'bg-gradient' : ''}  selection:select-none cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
+            className={`${active == 'About' ? 'bg-gradient' : ''}  selection:select-none cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
-            spy={true}>   
+            spy={true}>
             <FontAwesomeIcon icon={faUserCircle} />
           </Link>
           <Link
             to='work'
-            onClick={() => setActive('work')}
-            className={`${active == 'work' ? 'bg-gradient' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
+            className={`${active == 'Work' ? 'bg-gradient' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
             spy={true}>
             <FontAwesomeIcon icon={faBriefcase} />
           </Link>
           <Link
             to='contact'
-            onClick={() => setActive('contact')}
-            className={`${active == 'contact' ? 'bg-gradient' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
+            className={`${active == 'Contact' ? 'bg-gradient' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
             spy={true}>
             <FontAwesomeIcon icon={faPhone} />

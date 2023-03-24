@@ -35,9 +35,9 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       hidden
       md:flex items-center font-roboto' data-aos="fade-down
       ">
-        <a href='#' className='text-white text-lg font-bold mr-10'>Work</a>
-        <a href='#' className='text-white text-lg font-bold mr-10'>About</a>
-        <a href='#' className='text-white text-lg font-bold mr-10'>Contact</a>
+        <a href='#about' className='text-white text-lg font-bold mr-10'>About</a>
+        <a href='#work' className='text-white text-lg font-bold mr-10'>Work</a>
+        <a href='#contact' className='text-white text-lg font-bold mr-10'>Contact</a>
       </div>
 
       <div data-aos="fade-down" className="

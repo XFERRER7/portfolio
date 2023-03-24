@@ -20,7 +20,7 @@ export const Contact = ({ onAction }: IMainComponentProps) => {
       />
       <Title title="Contact Me" />
 
-      <div className="flex flex-col md:flex-row w-full md:h-[30rem] md:gap-0 gap-5">
+      <div className="flex flex-col md:flex-row w-full md:h-[30rem] md:gap-0 gap-5" data-aos='fade-up' data-aos-once="true">
 
         <div className="flex-1 rounded-sm p-2">
           <FormContact />

@@ -17,7 +17,7 @@ export const About = ({ onAction }: IMainComponentProps) => {
           onAction("About");
         }}
       />
-      <div className="w-full flex flex-col gap-10 items-center">
+      <div className="w-full flex flex-col gap-10 items-center" data-aos='fade-up' data-aos-once="true">
         <Title title="Visão geral" />
         <span className="
           w-full
@@ -38,7 +38,9 @@ export const About = ({ onAction }: IMainComponentProps) => {
       <div className="
       flex-col gap-10
       w-full md:h-96 py-6 flex md:flex-row md:justify-around
-      ">
+      "
+      data-aos='fade-up' data-aos-once="true"
+      >
         <TechnologyCard
           icon={faCode}
           title="Front-end Developer"

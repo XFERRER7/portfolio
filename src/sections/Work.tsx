@@ -14,7 +14,7 @@ export const Work = ({ onAction }: IMainComponentProps) => {
           onAction("Work");
         }}
       />
-      <div className="w-full flex flex-col gap-10 items-center">
+      <div className="w-full flex flex-col gap-10 items-center" data-aos='fade-up' data-aos-once="true">
         <Title title="Trabalhos e projetos" />
         <span className="
           w-full
@@ -25,7 +25,7 @@ export const Work = ({ onAction }: IMainComponentProps) => {
         </span>
       </div>
 
-      <div className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center" data-aos='fade-up' data-aos-once="true">
 
         <div className="
         flex-col gap-14

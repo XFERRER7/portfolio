@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
@@ -20,6 +21,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scroll": "^1.8.9",
+    "react-toastify": "^9.1.1",
     "three": "^0.150.1",
     "typewriter-effect": "^2.19.0"
   },

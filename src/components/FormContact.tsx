@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import { Input } from '../elements/Input'
+import emailjs from '@emailjs/browser'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 interface IFormData {
   nome: string
@@ -10,16 +13,46 @@ interface IFormData {
 
 export const FormContact = () => {
 
-
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
 
   const handleSubmit = async (formData: IFormData) => {
-    alert('Formulário enviado com sucesso!')
-  }
 
+    if (name == '' || email == '' || subject == '' || message == '') {
+      toast.error('Preencha todos os campos', {
+        closeOnClick: true,
+        pauseOnHover: true,
+      })
+      return
+    }
+
+    const templateParams = {
+      from_name: formData.nome,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.mensagem
+    }
+
+    emailjs.send("service_5z29fqn", "template_vjvnxpk", templateParams, "lL3u-Qdrfe1F3ORgg")
+      .then(() => {
+        toast.success('Email enviado com sucesso!', {
+          closeOnClick: true,
+          pauseOnHover: true,
+        })
+        setName('')
+        setEmail('')
+        setSubject('')
+        setMessage('')
+      }, (error) => {
+        toast.error('Erro ao enviar email', {
+          closeOnClick: true,
+          pauseOnHover: true,
+        })
+        console.log(error.text);
+      })
+  }
 
   return (
     <form className='w-full h-full rounded-sm flex flex-col 
@@ -57,6 +90,7 @@ export const FormContact = () => {
         }} className='w-full md:w-56 h-12 rounded bg-primary text-white font-semibold 
         font-poppins'>Send</button>
       </div>
+      <ToastContainer />
     </form>
   )
 }

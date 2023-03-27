@@ -9,7 +9,7 @@ interface IExperienceCardProps {
 export const ExperienceCard = ({ img, link, title, }: IExperienceCardProps) => {
   return (
     <div className='font-poppins w-full md:w-80 h-80 md:h-full group 
-    relative overflow-hidden rounded'>
+    relative overflow-hidden rounded border border-white'>
 
       <div className='w-full h-full group-hover:bg-black/70 absolute z-40 
       transition-all duration-300'></div>

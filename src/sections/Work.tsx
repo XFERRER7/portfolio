@@ -2,7 +2,7 @@ import { Waypoint } from "react-waypoint"
 import { ExperienceCard } from "../elements/ExperienceCard"
 import { Title } from "../elements/Title"
 import { IMainComponentProps } from "../types"
-import img1 from '/work1.png'
+import img1 from '/work2.png'
 
 
 export const Work = ({ onAction }: IMainComponentProps) => {

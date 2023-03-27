@@ -19,7 +19,7 @@ export const About = ({ onAction }: IMainComponentProps) => {
       />
       <div className="w-full flex flex-col gap-10 items-center" data-aos='fade-up' data-aos-once="true">
         <Title title="Visão geral" />
-        <span className="
+        <span data-aos='fade-up' className="
           w-full
           text-md text-gray-300 md:w-3/5
           md:text-md text-center font-semibold flex justify-center gap-1

@@ -2,12 +2,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
+import useLanguageStore from '../stores/languageStore'
+import { useTextController } from '../hooks/useTextController'
 
 interface ISidebarProps {
   sidebarIsOpen: boolean
 }
 
 export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
+
+  const { language, setLanguage } = useLanguageStore()
+
+  const { controllerTextHeader } = useTextController()
+
   return (
     <div className={`
     ${sidebarIsOpen ? 'absolute' : 'hidden'} top-0
@@ -22,19 +30,45 @@ export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faUserCircle} />
-          <a href='#about' className="h-10 px-2 text-white flex items-center">About</a>
+          <a href='#about' className="h-10 px-2 text-white flex items-center">{controllerTextHeader('item1')}</a>
         </div>
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faBriefcase} />
-          <a href='#work' className="h-10 px-2 text-white flex items-center">Work</a>
+          <a href='#work' className="h-10 px-2 text-white flex items-center">{controllerTextHeader('item2')}</a>
         </div>
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faPhone} />
-          <a href='#contact' className="h-10 px-2 text-white flex items-center">Contact</a>
+          <a href='#contact' className="h-10 px-2 text-white flex items-center">{controllerTextHeader('item3')}</a>
         </div>
+        <div className='flex gap-4 items-center'>
+            <FontAwesomeIcon icon={faGlobe} />
+          <div className='flex gap-2 items-center'>
+            <button
+              className={`${language == 'EN' ? 'text-black font-bold bg-white' : ''}  
+              font-roboto cursor-pointer transition-colors duration-300 ease-in-out px-6 
+              rounded-sm border`}
+              onClick={() => {
+                setLanguage('en')
+              }}
+            >
+              EN
+            </button>
 
+            <span
+              className={`${language == 'PT' ? 'text-black font-bold bg-white' : ''} font-roboto 
+              cursor-pointer transition-colors duration-300 ease-in-out px-6 
+              rounded-sm border`}
+              onClick={() => {
+                setLanguage('pt')
+              }}
+            >
+              PT
+            </span>
+          </div>
+
+        </div>
 
       </div>
 

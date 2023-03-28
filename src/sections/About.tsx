@@ -5,14 +5,18 @@ import { faHandshake } from "@fortawesome/free-solid-svg-icons"
 import { Title } from "../elements/Title"
 import { IMainComponentProps } from "../types"
 import { Waypoint } from "react-waypoint"
+import { useTextController } from "../hooks/useTextController"
 
 export const About = ({ onAction }: IMainComponentProps) => {
+
+  const { controllerTextAbout } = useTextController()
+
   return (
     <div id="about" className='
       w-full bg-gradient-to-t from-[#1a0a36] via-[#120625] to-[#0f051f]
       px-10 flex flex-col py-16 gap-14 border-b
      '>
-       <Waypoint
+      <Waypoint
         onEnter={() => {
           onAction("About");
         }}
@@ -24,14 +28,7 @@ export const About = ({ onAction }: IMainComponentProps) => {
           text-md text-gray-300 md:w-3/5
           md:text-md text-center font-semibold flex justify-center gap-1
           ">
-          Meu nome é Alexandre Talles e sou um desenvolvedor full-stack com foco em front-end
-          utilizando React JS e back-end utilizando Node JS.
-          Sou particularmente hábil com React JS, tendo desenvolvido diversas aplicações
-          utilizando essa tecnologia. Tenho dois anos de
-          experiência com desenvolvimento de software.
-          Eu me considero um desenvolvedor altamente motivado e apaixonado por software.
-          Sempre estou buscando por novas oportunidades para aprender e crescer, e isso se
-          reflete em minha habilidade de aprender rapidamente novas tecnologias e conceitos.
+          {controllerTextAbout('card1')}
         </span>
       </div>
 
@@ -39,7 +36,7 @@ export const About = ({ onAction }: IMainComponentProps) => {
       flex-col gap-10
       w-full md:h-96 py-6 flex md:flex-row md:justify-around
       "
-      data-aos='fade-up' data-aos-once="true"
+        data-aos='fade-up' data-aos-once="true"
       >
         <TechnologyCard
           icon={faCode}

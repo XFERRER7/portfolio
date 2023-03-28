@@ -6,10 +6,12 @@ import { About } from "./sections/About"
 import { Work } from "./sections/Work"
 import { FloatingBar } from "./components/FloatingBar"
 import { Contact } from "./sections/Contact"
+import useLanguageStore from "./stores/languageStore"
 
 function App() {
 
   const [currentSection, setCurrentSection] = useState("Header")
+  const { language } = useLanguageStore()
 
   useEffect(() => {
 
@@ -22,10 +24,10 @@ function App() {
   return (
     <>
       <FloatingBar currentSection={currentSection} />
-      <Header onAction={setCurrentSection} />
-      <About onAction={setCurrentSection} />
-      <Work onAction={setCurrentSection} />
-      <Contact onAction={setCurrentSection} />
+      <Header onAction={setCurrentSection} language={language}/>
+      <About onAction={setCurrentSection} language={language}/>
+      <Work onAction={setCurrentSection} language={language}/>
+      <Contact onAction={setCurrentSection} language={language}/>
     </>
   )
 }

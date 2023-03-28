@@ -4,7 +4,7 @@ import 'react-vertical-timeline-component/style.min.css'
 interface IExCardProps {
   experience: {
     title: string
-    company_name: string
+    technology: string
     points: string[]
     icon: string
     date: string
@@ -16,18 +16,18 @@ export const ExCard = ({ experience }: IExCardProps) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "#361957",
         color: "#fff",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
-      iconStyle={{ background: experience.icon }}
+      iconStyle={{ background: experience.iconBg }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
           <img
             src={experience.icon}
-            alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
+            alt={experience.technology}
+            className='w-[100%] h-[100%] object-contain cursor-not-allowed'
           />
         </div>
       }
@@ -38,7 +38,7 @@ export const ExCard = ({ experience }: IExCardProps) => {
           className='text-secondary text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
-          {experience.company_name}
+          {experience.technology}
         </p>
       </div>
 

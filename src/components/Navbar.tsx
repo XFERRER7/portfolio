@@ -1,6 +1,8 @@
 //import x from awsome icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
+import useLanguageStore from '../stores/languageStore'
+import { useTextController } from '../hooks/useTextController'
 
 interface INavbarProps {
   setSidebarIsOpen: (value: boolean) => void
@@ -8,6 +10,11 @@ interface INavbarProps {
 }
 
 export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
+
+  const { language, setLanguage } = useLanguageStore()
+
+  const { controllerTextHeader } = useTextController()
+
   return (
     <div className={`
     w-full h-20 ${sidebarIsOpen ? '' : 'border-b'} flex items-center justify-between
@@ -24,20 +31,42 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       </div>
 
       <div className="
-      hidden
+      hidden md:flex gap-3
       ">
-        <span className="text-primary">EN</span>
+        <span
+          className={`${language == 'en' ? 'text-primary hover:text-primary' : 'text-white'}  font-roboto 
+        font-semibold cursor-pointer transition-colors duration-300 ease-in-out
+        hover:text-gray-300 hover:transition-colors hover:duration-300 hover:ease-in-out 
+        `}
+          onClick={() => {
+            setLanguage('en')
+          }}
+        >
+          EN
+        </span>
+
         <span>|</span>
-        <span>PT</span>
+
+        <span
+          className={`${language == 'pt' ? 'text-primary hover:text-primary' : 'text-white'} font-roboto 
+        font-semibold cursor-pointer transition-colors duration-300 ease-in-out
+        hover:text-gray-300 hover:transition-all 
+        `}
+          onClick={() => {
+            setLanguage('pt')
+          }}
+        >
+          PT
+        </span>
       </div>
 
       <div className='
       hidden
       md:flex items-center font-roboto' data-aos="fade-down
       ">
-        <a href='#about' className='text-white text-lg font-bold mr-10'>About</a>
-        <a href='#work' className='text-white text-lg font-bold mr-10'>Work</a>
-        <a href='#contact' className='text-white text-lg font-bold mr-10'>Contact</a>
+        <a href='#about' className='text-white text-lg font-bold mr-10'>{controllerTextHeader('item1')}</a>
+        <a href='#work' className='text-white text-lg font-bold mr-10'>{controllerTextHeader('item2')}</a>
+        <a href='#contact' className='text-white text-lg font-bold mr-10'>{controllerTextHeader('item3')}</a>
       </div>
 
       <div data-aos="fade-down" className="

@@ -28,7 +28,7 @@ export const About = ({ onAction }: IMainComponentProps) => {
           text-md text-gray-300 md:w-3/5
           md:text-md text-center font-semibold flex justify-center gap-1
           ">
-          {controllerTextAbout('card1')}
+          Meu nome é Alexandre Talles e sou um desenvolvedor full-stack com foco em front-end utilizando React JS e back-end utilizando Node JS. Sou particularmente hábil com React JS, tendo desenvolvido diversas aplicações utilizando essa tecnologia. Tenho dois anos de experiência com desenvolvimento de software. Eu me considero um desenvolvedor altamente motivado e apaixonado por software. Sempre estou buscando por novas oportunidades para aprender e crescer, e isso se reflete em minha habilidade de aprender rapidamente novas tecnologias e conceitos.
         </span>
       </div>
 

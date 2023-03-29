@@ -63,6 +63,7 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
 
       <div className='
       hidden
+      w-64
       md:flex items-center font-roboto' data-aos="fade-down
       ">
         <a href='#about' className='text-white text-lg font-bold mr-10'>{tranlations.header.item1Navbar}</a>
@@ -80,7 +81,7 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       >
         {
           sidebarIsOpen ?
-            <FontAwesomeIcon icon={faX} size="2xl" /> :
+            <span className='text-3xl w-5 font-bold'>X</span> :
             <>
               <div className="w-10 h-1 rounded-lg bg-white"></div>
               <div className="w-10 h-1 rounded-lg bg-white"></div>

@@ -46,9 +46,9 @@ export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
             <FontAwesomeIcon icon={faGlobe} />
           <div className='flex gap-2 items-center'>
             <button
-              className={`${language == 'EN' ? 'text-black font-bold bg-white' : ''}  
+              className={`${language == 'en' ? 'text-black font-bold bg-white' : ''}  
               font-roboto cursor-pointer transition-colors duration-300 ease-in-out px-6 
-              rounded-sm border`}
+              rounded border`}
               onClick={() => {
                 setLanguage('en')
               }}
@@ -57,9 +57,9 @@ export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
             </button>
 
             <span
-              className={`${language == 'PT' ? 'text-black font-bold bg-white' : ''} font-roboto 
+              className={`${language == 'pt' ? 'text-black font-bold bg-white' : ''} font-roboto 
               cursor-pointer transition-colors duration-300 ease-in-out px-6 
-              rounded-sm border`}
+              rounded border`}
               onClick={() => {
                 setLanguage('pt')
               }}

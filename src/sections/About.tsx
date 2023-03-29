@@ -5,11 +5,8 @@ import { faHandshake } from "@fortawesome/free-solid-svg-icons"
 import { Title } from "../elements/Title"
 import { IMainComponentProps } from "../types"
 import { Waypoint } from "react-waypoint"
-import { useTextController } from "../hooks/useTextController"
 
 export const About = ({ onAction }: IMainComponentProps) => {
-
-  const { controllerTextAbout } = useTextController()
 
   return (
     <div id="about" className='

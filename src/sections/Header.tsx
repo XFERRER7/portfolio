@@ -12,7 +12,6 @@ export const Header = ({ onAction }: IMainComponentProps) => {
 
   const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
 
-  const { controllerTextHeader } = useTextController()
 
   return (
     <div id='header'
@@ -37,7 +36,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
           <h1 className='
           text-5xl text-center
           md:text-7xl font-poppins font-bold tracking-wide upp
-          '><span>{controllerTextHeader('title')} </span>
+          '><span>Olá, eu sou o</span>
             <span className='text-primary text-center'
               style={{
                 backgroundClip: 'text',
@@ -51,7 +50,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
           text-md text-left text-gray-300
           md:text-xl md:text-center font-semibold flex justify-center gap-1
           '>
-            {controllerTextHeader('subtitle')},
+            Desenvolvedor Fullstack,
             <Typewriter
               options={{
                 delay: 100,

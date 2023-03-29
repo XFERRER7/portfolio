@@ -4,7 +4,6 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import useLanguageStore from '../stores/languageStore'
-import { useTextController } from '../hooks/useTextController'
 
 interface ISidebarProps {
   sidebarIsOpen: boolean
@@ -13,8 +12,6 @@ interface ISidebarProps {
 export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
 
   const { language, setLanguage } = useLanguageStore()
-
-  const { controllerTextHeader } = useTextController()
 
   return (
     <div className={`
@@ -30,17 +27,17 @@ export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faUserCircle} />
-          <a href='#about' className="h-10 px-2 text-white flex items-center">{controllerTextHeader('item1')}</a>
+          <a href='#about' className="h-10 px-2 text-white flex items-center">Sobre</a>
         </div>
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faBriefcase} />
-          <a href='#work' className="h-10 px-2 text-white flex items-center">{controllerTextHeader('item2')}</a>
+          <a href='#work' className="h-10 px-2 text-white flex items-center">Trabalhos</a>
         </div>
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faPhone} />
-          <a href='#contact' className="h-10 px-2 text-white flex items-center">{controllerTextHeader('item3')}</a>
+          <a href='#contact' className="h-10 px-2 text-white flex items-center">Contato</a>
         </div>
         <div className='flex gap-4 items-center'>
             <FontAwesomeIcon icon={faGlobe} />

@@ -2,7 +2,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
 import useLanguageStore from '../stores/languageStore'
-import { useTextController } from '../hooks/useTextController'
 
 interface INavbarProps {
   setSidebarIsOpen: (value: boolean) => void
@@ -12,8 +11,6 @@ interface INavbarProps {
 export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
 
   const { language, setLanguage } = useLanguageStore()
-
-  const { controllerTextHeader } = useTextController()
 
   return (
     <div className={`
@@ -64,9 +61,9 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       hidden
       md:flex items-center font-roboto' data-aos="fade-down
       ">
-        <a href='#about' className='text-white text-lg font-bold mr-10'>{controllerTextHeader('item1')}</a>
-        <a href='#work' className='text-white text-lg font-bold mr-10'>{controllerTextHeader('item2')}</a>
-        <a href='#contact' className='text-white text-lg font-bold mr-10'>{controllerTextHeader('item3')}</a>
+        <a href='#about' className='text-white text-lg font-bold mr-10'>Sobre</a>
+        <a href='#work' className='text-white text-lg font-bold mr-10'>Trabalhos</a>
+        <a href='#contact' className='text-white text-lg font-bold mr-10'>Contato</a>
       </div>
 
       <div data-aos="fade-down" className="

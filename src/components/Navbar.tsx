@@ -2,6 +2,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faX } from '@fortawesome/free-solid-svg-icons'
 import useLanguageStore from '../stores/languageStore'
+import { en } from '../utils/en'
+import { pt } from '../utils/pt'
+import { useLanguage } from '../hooks/useLanguage'
 
 interface INavbarProps {
   setSidebarIsOpen: (value: boolean) => void
@@ -11,6 +14,7 @@ interface INavbarProps {
 export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
 
   const { language, setLanguage } = useLanguageStore()
+  const { tranlations } = useLanguage()
 
   return (
     <div className={`
@@ -61,9 +65,9 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       hidden
       md:flex items-center font-roboto' data-aos="fade-down
       ">
-        <a href='#about' className='text-white text-lg font-bold mr-10'>Sobre</a>
-        <a href='#work' className='text-white text-lg font-bold mr-10'>Trabalhos</a>
-        <a href='#contact' className='text-white text-lg font-bold mr-10'>Contato</a>
+        <a href='#about' className='text-white text-lg font-bold mr-10'>{tranlations.header.item1Navbar}</a>
+        <a href='#work' className='text-white text-lg font-bold mr-10'>{tranlations.header.item2Navbar}</a>
+        <a href='#contact' className='text-white text-lg font-bold mr-10'>{tranlations.header.item3Navbar}</a>
       </div>
 
       <div data-aos="fade-down" className="

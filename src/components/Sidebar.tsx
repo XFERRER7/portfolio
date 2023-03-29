@@ -4,6 +4,7 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import useLanguageStore from '../stores/languageStore'
+import { useLanguage } from '../hooks/useLanguage'
 
 interface ISidebarProps {
   sidebarIsOpen: boolean
@@ -12,6 +13,8 @@ interface ISidebarProps {
 export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
 
   const { language, setLanguage } = useLanguageStore()
+
+  const { tranlations } = useLanguage()
 
   return (
     <div className={`
@@ -27,17 +30,17 @@ export const Sidebar = ({ sidebarIsOpen }: ISidebarProps) => {
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faUserCircle} />
-          <a href='#about' className="h-10 px-2 text-white flex items-center">Sobre</a>
+          <a href='#about' className="h-10 px-2 text-white flex items-center">{tranlations.header.item1Navbar}</a>
         </div>
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faBriefcase} />
-          <a href='#work' className="h-10 px-2 text-white flex items-center">Trabalhos</a>
+          <a href='#work' className="h-10 px-2 text-white flex items-center">{tranlations.header.item2Navbar}</a>
         </div>
 
         <div className='flex gap-2 items-center'>
           <FontAwesomeIcon icon={faPhone} />
-          <a href='#contact' className="h-10 px-2 text-white flex items-center">Contato</a>
+          <a href='#contact' className="h-10 px-2 text-white flex items-center">{tranlations.header.item3Navbar}</a>
         </div>
         <div className='flex gap-4 items-center'>
             <FontAwesomeIcon icon={faGlobe} />

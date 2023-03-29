@@ -8,8 +8,12 @@ import { Atom } from "../components/Atom"
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { IMainComponentProps } from "../types"
 import { Waypoint } from "react-waypoint"
+import { useLanguage } from "../hooks/useLanguage"
 
 export const Contact = ({ onAction }: IMainComponentProps) => {
+
+  const { tranlations } = useLanguage()
+
   return (
     <div id="contact" className=' bg-gradient-to-t 
     from-[#1a0a36] via-[#120625] to-[#0f051f] px-10 flex flex-col py-16 gap-14 '>
@@ -18,7 +22,7 @@ export const Contact = ({ onAction }: IMainComponentProps) => {
           onAction("Contact");
         }}
       />
-      <Title title="Contact Me" />
+      <Title title={tranlations.contact.title} />
 
       <div className="flex flex-col md:flex-row w-full md:h-[30rem] md:gap-0 gap-5" data-aos='fade-up' data-aos-once="true">
 

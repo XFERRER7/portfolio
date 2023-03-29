@@ -1,11 +1,13 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css'
+import useLanguageStore from '../stores/languageStore'
 
 interface IExCardProps {
   experience: {
     title: string
     technology: string
-    points: string[]
+    pointsEn: string[]
+    pointsPt: string[]
     icon: string
     date: string
     iconBg: string
@@ -13,6 +15,9 @@ interface IExCardProps {
 }
 
 export const ExCard = ({ experience }: IExCardProps) => {
+
+  const { language } = useLanguageStore()
+
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -43,14 +48,20 @@ export const ExCard = ({ experience }: IExCardProps) => {
       </div>
 
       <ul className='mt-5 list-disc ml-5 space-y-2'>
-        {experience.points.map((point, index) => (
-          <li
-            key={`experiencet-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
-          >
-            {point}
-          </li>
-        ))}
+        {
+          language === 'en' ?
+            experience.pointsEn.map((point, index) =>
+              <li key={index} className='text-white text-[16px] font-semibold'>
+                {point}
+              </li>
+            )
+            :
+            experience.pointsPt.map((point, index) =>
+              <li key={index} className='text-white text-[16px] font-semibold'>
+                {point}
+              </li>
+            )
+        }
       </ul>
     </VerticalTimelineElement>
   )

@@ -8,8 +8,11 @@ import 'react-vertical-timeline-component/style.min.css';
 import { useState } from "react"
 import { ExCard } from "../components/ExCard"
 import { experiences } from "../utils/experiences"
+import { useLanguage } from "../hooks/useLanguage"
 
 export const Work = ({ onAction }: IMainComponentProps) => {
+
+  const { tranlations } = useLanguage()
 
   return (
     <div id="work" className="w-full bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f]
@@ -20,13 +23,13 @@ export const Work = ({ onAction }: IMainComponentProps) => {
         }}
       />
       <div className="w-full flex flex-col gap-10 items-center" data-aos='fade-up' data-aos-once="true">
-        <Title title="Trabalhos e projetos" />
+        <Title title={tranlations.work.title} />
         <span data-aos='fade-up' data-aos-once="true" className="
           w-full
           text-md text-gray-300 md:w-3/5
           md:text-md text-center font-semibold flex justify-center gap-1
           ">
-          Minha experiência com desenvolvimento de software.
+          {tranlations.work.subtitle}
         </span>
       </div>
 

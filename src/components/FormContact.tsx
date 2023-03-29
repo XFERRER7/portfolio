@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import load from '/load.png'
+import { useLanguage } from '../hooks/useLanguage';
 
 interface IFormData {
   nome: string
@@ -19,6 +20,8 @@ export const FormContact = () => {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
   const [loading, setLoading] = useState(false)
+
+  const { tranlations } = useLanguage()
 
   const handleSubmit = async (formData: IFormData) => {
 
@@ -64,14 +67,14 @@ export const FormContact = () => {
     <form className='w-full h-full rounded-sm flex flex-col 
     gap-5 items-center md:p-10 relative'>
 
-      <h1 className='text-2xl text-gray-300 text-center font-semibold'>Let's work together?</h1>
+      <h1 className='text-2xl text-gray-300 text-center font-semibold'>{tranlations.contact.subtitle}</h1>
 
       <div className='w-full h-12 flex justify-between gap-2'>
-        <Input value={name} placeholder='Name' onchange={(e) => setName(e.target.value)} />
-        <Input value={email} placeholder='Email' onchange={(e) => setEmail(e.target.value)} />
+        <Input value={name} placeholder={tranlations.contact.form.name} onchange={(e) => setName(e.target.value)} />
+        <Input value={email} placeholder={tranlations.contact.form.email} onchange={(e) => setEmail(e.target.value)} />
       </div>
       <div className='w-full h-12 flex justify-center'>
-        <Input value={subject} placeholder='Subject' onchange={(e) => setSubject(e.target.value)} />
+        <Input value={subject} placeholder={tranlations.contact.form.subject} onchange={(e) => setSubject(e.target.value)} />
       </div>
       <div className='w-full flex justify-center'>
         <textarea
@@ -81,7 +84,7 @@ export const FormContact = () => {
           onChange={(e) => {
             setMessage(e.target.value)
           }}
-          placeholder='Message' cols={30} rows={10}></textarea>
+          placeholder={tranlations.contact.form.message} cols={30} rows={10}></textarea>
       </div>
 
       <div className='w-full h-10 flex justify-center'>
@@ -99,7 +102,7 @@ export const FormContact = () => {
         >
           
           {
-            loading ? <img src={load} alt="load" className='h-10 -10 animate-spin '/> : 'Send'
+            loading ? <img src={load} alt="load" className='h-10 -10 animate-spin '/> : tranlations.contact.form.button
           }
           
         </button>

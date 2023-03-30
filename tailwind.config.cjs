@@ -10,6 +10,17 @@ module.exports = {
         "header": "url('/bg-header.jpg')",
         "text": "linear-gradient(to right, #ffffff, #61dafb)"
       },
+
+      rotate: {
+        'menu-l': '45deg',
+        'menu-r': '-45deg',
+      },
+      translate: {
+        'menu-lx': '0.75rem',
+        'menu-ly': '1.25rem',
+        'menu-rx': '0.70rem',
+        'menu-ry': '0.48rem',
+      },
       backgroundImage: {
         gradient: 'linear-gradient(90deg, #a230ad, #6b00d7, #3e00b3)',
         gradient2: 'linear-gradient(90deg, #a230ad7a, #6b00d775, #3f00b37a)',
@@ -45,7 +56,7 @@ module.exports = {
       animation: {
         eletron: 'eletron 8s ease-in-out',
         node: 'node 8s ease-in-out',
-        input: 'input 1s ease-out forwards'
+        input: 'input 1s ease-out forwards',
       },
     },
   },

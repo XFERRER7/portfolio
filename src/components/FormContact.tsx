@@ -97,7 +97,7 @@ export const FormContact = () => {
             mensagem: message
           })
         }} className='w-full md:w-56 h-12 rounded bg-primary text-white font-semibold 
-        font-poppins flex items-center gap-3 justify-center'
+        font-poppins flex items-center gap-3 justify-center hover:brightness-75 transition-all'
         disabled={loading ? true : false}
         >
           

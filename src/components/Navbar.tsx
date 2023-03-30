@@ -79,15 +79,18 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
           setSidebarIsOpen(!sidebarIsOpen)
         }}
       >
-        {
-          sidebarIsOpen ?
-            <span className='text-3xl w-5 font-bold'>X</span> :
-            <>
-              <div className="w-10 h-1 rounded-lg bg-white"></div>
-              <div className="w-10 h-1 rounded-lg bg-white"></div>
-              <div className="w-10 h-1 rounded-lg bg-white"></div>
-            </>
-        }
+        <div className={`flex flex-col gap-2 ${sidebarIsOpen ? 'mb-5 mr-2' : ''}`}>
+          
+          <div className={`w-8 h-1 rounded-lg transition-all bg-white 
+          ${sidebarIsOpen ? 'rotate-45  translate-x-menu-lx translate-y-menu-ly' : ''}`}></div>
+
+          <div className={`w-8 h-1 rounded-lg bg-white 
+          ${sidebarIsOpen ? 'hidden' : ''}`}></div>
+
+          <div className={`w-8 h-1 rounded-lg transition-all bg-white 
+          ${sidebarIsOpen ? '-rotate-45 translate-x-menu-rx translate-y-menu-ry' : ''}`}></div>
+          
+        </div>
       </div>
 
     </div>

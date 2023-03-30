@@ -33,7 +33,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
       '>
         <ReactLogo />
         <Sidebar sidebarIsOpen={sidebarIsOpen} />
-        <div className='flex flex-col gap-4'>
+        <div className='flex flex-col gap-4 hover:scale-105 transition-all duration-700'>
           <h1 className='
           text-5xl text-center
           md:text-7xl font-poppins font-bold tracking-wide upp
@@ -49,14 +49,14 @@ export const Header = ({ onAction }: IMainComponentProps) => {
           </h1>
           <span className='
           text-md text-left text-gray-300
-          md:text-xl md:text-center font-semibold flex justify-center gap-1
+          md:text-xl md:text-center font-semibold flex justify-center md:gap-1
           '>
             {tranlations.header.subtitle},
             <Typewriter
               options={{
                 delay: 100,
                 cursor: '',
-                wrapperClassName: 'ml-2 text-[#61dafb] font-semibold tracking-wider',
+                wrapperClassName: 'ml-2 text-[#61dafb] font-semibold tracking-wider mr-1',
               }}
               onInit={(typewriter) => {
                 typewriter.typeString('React')
@@ -68,7 +68,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
               options={{
                 delay: 100,
                 cursor: '',
-                wrapperClassName: 'text-[#68A063] font-semibold tracking-wider',
+                wrapperClassName: 'text-[#68A063] font-semibold tracking-wider ml-1',
               }}
               onInit={(typewriter) => {
                 typewriter.typeString('Node')

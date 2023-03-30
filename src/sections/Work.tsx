@@ -48,24 +48,3 @@ export const Work = ({ onAction }: IMainComponentProps) => {
     </div>
   )
 }
-
-
-
-{/* <div className="
-        flex-col gap-14
-        w-full md:h-80 py-6 flex md:flex-row md:justify-center
-        ">
-          <ExperienceCard img={img1} link="https://www.marmorariadecore.website" title="React JS - Typescript" />
-          <ExperienceCard img={img1} link="https://www.marmorariadecore.website" title="Landing page desenvolvida com React JS" />
-          <ExperienceCard img={img1} link="https://www.marmorariadecore.website" title="Landing page desenvolvida com React JS" />
-        </div>
-
-        <div className="
-      flex-col gap-14
-      w-full md:h-80 py-6 flex md:flex-row md:justify-center
-      ">
-          <ExperienceCard img={img1} link="https://www.marmorariadecore.website" title="Landing page desenvolvida com React JS" />
-          <ExperienceCard img={img1} link="https://www.marmorariadecore.website" title="Landing page desenvolvida com React JS" />
-          <ExperienceCard img={img1} link="https://www.marmorariadecore.website" title="Landing page desenvolvida com React JS" />
-
-        </div> */}

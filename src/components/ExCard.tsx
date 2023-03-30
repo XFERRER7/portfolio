@@ -20,6 +20,7 @@ export const ExCard = ({ experience }: IExCardProps) => {
 
   return (
     <VerticalTimelineElement
+      className='hover:brightness-150 transition-all'
       contentStyle={{
         background: "#361957",
         color: "#fff",

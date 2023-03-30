@@ -12,10 +12,10 @@ export const TechnologyCard = ({ title, description, icon }: ICardTechnologyProp
     <div
       className="
     w-full h-full text-center 
-    md:w-[21rem] md:h-80 md:text-left text-white rounded-lg
+    md:w-[21rem] md:h-[20.8rem] text-white rounded-lg
     "
     >
-      <div className="w-full h-full flex flex-col gap-5 rounded-lg p-8 bg-[#361957]">
+      <div className="w-full h-full flex flex-col gap-5 rounded-lg p-8 bg-[#361957] hover:brightness-150 transition-all duration-300">
         <FontAwesomeIcon icon={icon} size="3x" />
 
         <h1 className="font-poppins font-bold text-2xl">{title}</h1>

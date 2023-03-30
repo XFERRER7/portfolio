@@ -33,8 +33,8 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
 
       <div className="
       hidden md:flex gap-3
-      ">
-        <span
+      " data-aos="fade-down">
+        <span 
           className={`${language == 'en' ? 'text-primary hover:text-primary' : 'text-white'}  font-roboto 
         font-semibold cursor-pointer transition-colors duration-300 ease-in-out
         hover:text-gray-300 hover:transition-colors hover:duration-300 hover:ease-in-out 
@@ -64,8 +64,7 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       <div className='
       hidden
       w-64
-      md:flex items-center font-roboto' data-aos="fade-down
-      ">
+      md:flex items-center font-roboto' data-aos="fade-down">
         <a href='#about' className='text-white text-lg font-bold mr-10'>{tranlations.header.item1Navbar}</a>
         <a href='#work' className='text-white text-lg font-bold mr-10'>{tranlations.header.item2Navbar}</a>
         <a href='#contact' className='text-white text-lg font-bold mr-10'>{tranlations.header.item3Navbar}</a>

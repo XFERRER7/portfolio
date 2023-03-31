@@ -15,14 +15,14 @@ export const experiences = [
       "Desenvolvi tanto o front-end quanto o back-end do projeto com React JS e Node JS",
       "Em apenas 2 meses, consegui criar um projeto completo, aprendendo muito sobre como me autogerenciar",
       "Essa experiência me permitiu descobrir minhas habilidades e capacidades como desenvolvedor",
-      "Depois de terminar o projeto, me senti muito confiante em minhas habilidades e no que posso alcançar no futuro"
+      "Depois de terminar o projeto, me senti muito confiante em relação às minhas habilidades e no que posso alcançar no futuro"
     ],
     pointsEn: [
       "I created my own project to put all my skills into practice",
       "I developed both the front-end and back-end of the project with React JS and Node JS",
       "In just 2 months, I was able to create a complete project, learning a lot about how to self-manage",
       "This experience allowed me to discover my skills and capabilities as a developer",
-      "After finishing the project, I felt very confident in my skills and what I can achieve in the future"
+      "After finishing the project, I felt very confident about my skills and what I can achieve in the future"	
     ]
   },
   {

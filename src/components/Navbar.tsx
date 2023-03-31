@@ -12,7 +12,7 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
   const { tranlations } = useLanguage()
 
   return (
-    <div data-aos="fade-down" className={`
+    <div className={`
     w-full h-20 ${sidebarIsOpen ? '' : 'border-b'} flex items-center justify-between
     `}>
 

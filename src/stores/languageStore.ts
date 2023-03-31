@@ -8,7 +8,7 @@ interface ILanguageState {
 const useLanguageStore = create<ILanguageState>(
   
   (set) => ({
-    language: 'pt',
+    language: 'en',
     setLanguage: (language) => set({ language }),
   })
 );

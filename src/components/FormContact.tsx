@@ -64,7 +64,7 @@ export const FormContact = () => {
   }
 
   return (
-    <form className='w-full h-full rounded-sm flex flex-col 
+    <form className='w-full md:max-w-[40rem] h-full rounded-sm flex flex-col 
     gap-5 items-center md:p-10 relative'>
 
       <h1 className='text-2xl text-gray-300 text-center font-semibold'>{tranlations.contact.subtitle}</h1>

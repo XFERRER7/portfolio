@@ -29,7 +29,7 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       <div className="
       hidden md:flex gap-3
       ">
-        <span 
+        <span
           className={`${language == 'en' ? 'text-primary hover:text-primary' : 'text-white'}  font-roboto 
         font-semibold cursor-pointer transition-colors duration-300 ease-in-out
         hover:text-gray-300 hover:transition-colors hover:duration-300 hover:ease-in-out 
@@ -59,10 +59,18 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
       <div className='
       hidden
       w-64
-      md:flex items-center font-roboto'>
-        <a href='#about' className='text-white text-lg font-bold mr-10'>{tranlations.header.item1Navbar}</a>
-        <a href='#work' className='text-white text-lg font-bold mr-10'>{tranlations.header.item2Navbar}</a>
-        <a href='#contact' className='text-white text-lg font-bold mr-10'>{tranlations.header.item3Navbar}</a>
+      md:flex items-center font-roboto justify-between'>
+
+        <a href="https://www.linkedin.com/in/alexandre-talles-b662a020b/" target='_blank'>
+          <img src="linkedin.svg" alt="linkedin logo" className='w-8 h-8' />
+        </a>
+        <a href="https://github.com/XFERRER7" target='_blank'>
+          <img src="github.svg" alt="github logo" className='w-8 h-8' />
+        </a>
+        <a href="https://www.instagram.com/xande_ferreira7/" target='_blank'>
+          <img src="instagram.svg" alt="instagram logo" className='w-8 h-8' />
+        </a>
+
       </div>
 
       <div className="
@@ -74,7 +82,7 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
         }}
       >
         <div className={`flex flex-col gap-2 ${sidebarIsOpen ? 'mb-5 mr-2' : ''}`}>
-          
+
           <div className={`w-8 h-1 rounded-lg transition-all bg-white 
           ${sidebarIsOpen ? 'rotate-45  translate-x-menu-lx translate-y-menu-ly' : ''}`}></div>
 
@@ -83,7 +91,7 @@ export const Navbar = ({ setSidebarIsOpen, sidebarIsOpen }: INavbarProps) => {
 
           <div className={`w-8 h-1 rounded-lg transition-all bg-white 
           ${sidebarIsOpen ? '-rotate-45 translate-x-menu-rx translate-y-menu-ry' : ''}`}></div>
-          
+
         </div>
       </div>
 

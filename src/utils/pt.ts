@@ -1,8 +1,8 @@
 export const pt = {
   header: {
-    item1Navbar: 'Sobre',
-    item2Navbar: 'Trabalho',
-    item3Navbar: 'Contato',
+    item1Navbar: 'Linkedin',
+    item2Navbar: 'Github',
+    item3Navbar: 'Instragram',
     title: 'Olá, eu sou o',
     subtitle: 'Desenvolvedor Fullstack',
   },

@@ -34,7 +34,7 @@ export const About = ({ onAction }: IMainComponentProps) => {
 
       <div className="
       flex-col gap-10
-      w-full  py-6 flex md:flex-row md:justify-around
+      w-full  py-6 flex md:flex-row md:justify-center
       "
         data-aos='fade-up' data-aos-once="true"
       >

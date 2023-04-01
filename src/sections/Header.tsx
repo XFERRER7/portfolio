@@ -17,7 +17,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
   return (
     <div id='header'
       className='w-full h-screen bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f] 
-     bg-cover font-roboto px-10 flex flex-col
+     bg-cover font-roboto px-10 xl:px-16 flex flex-col
      pb-2 text-white border-b'
     >
       <Waypoint

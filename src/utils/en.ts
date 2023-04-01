@@ -1,8 +1,8 @@
 export const en = {
   header: {
-    item1Navbar: 'About',
-    item2Navbar: 'Work',
-    item3Navbar: 'Contact',
+    item1Navbar: 'Linkedin',
+    item2Navbar: 'Github',
+    item3Navbar: 'Instragram',
     title: 'Hi, I\'m',
     subtitle: 'Fullstack Developer',
   },

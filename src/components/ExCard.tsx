@@ -20,10 +20,10 @@ export const ExCard = ({ experience }: IExCardProps) => {
 
   return (
     <VerticalTimelineElement
-      className='hover:brightness-150 transition-all'
+      className='hover:scale-[1.01] transition-all font-bold'
       contentStyle={{
-        background: "#361957",
-        color: "#fff",
+        background: "#f4f4f5",
+        color: "#000",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
@@ -39,9 +39,9 @@ export const ExCard = ({ experience }: IExCardProps) => {
       }
     >
       <div>
-        <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
+        <h3 className='text-black text-[24px]'>{experience.title}</h3>
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-secondary text-[16px] font-semibold black'
           style={{ margin: 0 }}
         >
           {experience.technology}
@@ -52,13 +52,13 @@ export const ExCard = ({ experience }: IExCardProps) => {
         {
           language === 'en' ?
             experience.pointsEn.map((point, index) =>
-              <li key={index} className='text-white text-[16px] font-semibold'>
+              <li key={index} className='text-zinc-800 text-[16px]'>
                 {point}
               </li>
             )
             :
             experience.pointsPt.map((point, index) =>
-              <li key={index} className='text-white text-[16px] font-semibold'>
+              <li key={index} className='text-zinc-800 text-[16px]'>
                 {point}
               </li>
             )

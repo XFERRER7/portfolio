@@ -13,7 +13,7 @@ export const About = ({ onAction }: IMainComponentProps) => {
 
   return (
     <div id="about" className='
-      w-full bg-gradient-to-t from-[#1a0a36] via-[#120625] to-[#0f051f]
+      w-full bg-[#030007]
       px-10 flex flex-col py-16 gap-14 border-b
      '>
       <Waypoint

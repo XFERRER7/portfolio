@@ -78,7 +78,7 @@ export const FormContact = () => {
       </div>
       <div className='w-full flex justify-center'>
         <textarea
-          className='w-full h-32 p-2 rounded-sm bg-transparent border border-primary
+          className='w-full h-32 p-2 rounded-sm bg-transparent border border-white
           focus:outline-none focus:animate-input text-white scrollbar-thin overflow-x-hidden overflow-y-scroll scrollbar-thumb-primary'
           value={message != '' ? message : ''}
           onChange={(e) => {
@@ -96,7 +96,7 @@ export const FormContact = () => {
             subject: subject,
             mensagem: message
           })
-        }} className='w-full md:w-56 h-12 rounded bg-primary text-white font-semibold 
+        }} className='w-full md:w-56 h-12 rounded bg-zinc-100 text-black font-semibold 
         font-poppins flex items-center gap-3 justify-center hover:brightness-75 transition-all'
         disabled={loading ? true : false}
         >

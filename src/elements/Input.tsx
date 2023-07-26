@@ -11,7 +11,7 @@ export const Input = ({ placeholder, value, onchange, }: IInputProps) => {
     <>
       <input
         type="text"
-        className='w-full rounded p-2 border border-primary bg-transparent 
+        className='w-full rounded p-2 border border-white bg-transparent 
         placeholder:text-gray-400 focus:outline-none focus:border-0 focus:border-b-primary
         focus:border-b focus:rounded-none focus:animate-input text-white'
         value={value != '' ? value : ''}

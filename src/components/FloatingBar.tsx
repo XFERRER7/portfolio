@@ -21,13 +21,13 @@ export const FloatingBar = ({ currentSection }: IFloatingBarProps) => {
   return (
     <nav className='fixed bottom-5 md:bottom-3 w-full overflow-hidden z-50'>
       <div className='container mx-auto'>
-        <div className='w-[calc(100%-15px)] bg-black/20 h-16 backdrop-blur-2xl rounded-full 
-        max-w-[450px] mx-auto flex justify-around items-center text-2xl text-white'>
+        <div className='w-[calc(100%-15px)] bg-black/50 h-16 backdrop-blur-2xl rounded-full 
+        max-w-[450px] mx-auto flex justify-around items-center text-2xl text-zinc-200'>
 
           <Link
             to='header'
             className={`
-            ${active == 'Header' ? 'bg-gradient' : ''}
+            ${active == 'Header' ? 'bg-zinc-200 text-black' : ''}
               cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
             spy={true}>
@@ -35,21 +35,21 @@ export const FloatingBar = ({ currentSection }: IFloatingBarProps) => {
           </Link>
           <Link
             to='about'
-            className={`${active == 'About' ? 'bg-gradient' : ''}  selection:select-none cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
+            className={`${active == 'About' ? 'bg-zinc-200 text-black' : ''}  selection:select-none cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
             spy={true}>
             <FontAwesomeIcon icon={faUserCircle} />
           </Link>
           <Link
             to='work'
-            className={`${active == 'Work' ? 'bg-gradient' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
+            className={`${active == 'Work' ? 'bg-zinc-200 text-black' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
             spy={true}>
             <FontAwesomeIcon icon={faBriefcase} />
           </Link>
           <Link
             to='contact'
-            className={`${active == 'Contact' ? 'bg-gradient' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
+            className={`${active == 'Contact' ? 'bg-zinc-200 text-black' : ''} cursor-pointer w-14 h-14 flex items-center justify-center rounded-full`}
             smooth={true}
             spy={true}>
             <FontAwesomeIcon icon={faPhone} />

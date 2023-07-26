@@ -16,7 +16,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
 
   return (
     <div id='header'
-      className='w-full h-screen bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f] 
+      className='w-full h-screen bg-[#030007]
      bg-cover font-roboto px-10 xl:px-16 flex flex-col
      pb-2 text-white border-b'
     >
@@ -51,30 +51,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
           text-md text-left text-gray-300
           md:text-xl md:text-center font-semibold flex justify-center md:gap-1
           '>
-            {tranlations.header.subtitle},
-            <Typewriter
-              options={{
-                delay: 100,
-                cursor: '',
-                wrapperClassName: 'ml-2 text-[#61dafb] font-semibold tracking-wider mr-1',
-              }}
-              onInit={(typewriter) => {
-                typewriter.typeString('React')
-                  .start()
-              }}
-            />
-            <span>|</span>
-            <Typewriter
-              options={{
-                delay: 100,
-                cursor: '',
-                wrapperClassName: 'text-[#68A063] font-semibold tracking-wider ml-1',
-              }}
-              onInit={(typewriter) => {
-                typewriter.typeString('Node')
-                  .start()
-              }}
-            />
+            {tranlations.header.subtitle}
           </span>
         </div>
         <NodeLogo />

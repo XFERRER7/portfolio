@@ -15,7 +15,7 @@ export const Work = ({ onAction }: IMainComponentProps) => {
   const { tranlations } = useLanguage()
 
   return (
-    <div id="work" className="w-full bg-gradient-to-b from-[#1a0a36] via-[#120625] to-[#0f051f]
+    <div id="work" className="w-full bg-[#030007]
     px-10 flex flex-col py-16 gap-14 border-b">
       <Waypoint
         onEnter={() => {

@@ -15,8 +15,7 @@ export const Contact = ({ onAction }: IMainComponentProps) => {
   const { tranlations } = useLanguage()
 
   return (
-    <div id="contact" className=' bg-gradient-to-t 
-    from-[#1a0a36] via-[#120625] to-[#0f051f] px-10 flex flex-col py-16 gap-14 '>
+    <div id="contact" className='bg-[#030007] px-10 flex flex-col py-16 gap-14'>
       <Waypoint
         onEnter={() => {
           onAction("Contact");
@@ -35,7 +34,11 @@ export const Contact = ({ onAction }: IMainComponentProps) => {
           <Canvas camera={{ position: [0, 0, 10] }}>
             <OrbitControls enableZoom={false} />
             <Float speed={4} rotationIntensity={1} floatIntensity={2}>
-              <Suspense>
+              <Suspense fallback={
+                <p className="font-bold text-white">
+                  Loading...
+                </p>
+              }>
                 <Atom />
               </Suspense>
             </Float>

@@ -1,12 +1,11 @@
 import { Navbar } from '../components/Navbar'
-import { ReactLogo } from '../elements/ReactLogo'
-import { NodeLogo } from '../elements/NodeLogo'
 import Typewriter from 'typewriter-effect'
 import { Sidebar } from '../components/Sidebar'
 import { useState } from 'react'
 import { IMainComponentProps } from '../types'
 import { Waypoint } from "react-waypoint";
 import { useLanguage } from '../hooks/useLanguage'
+import { AnimatedIcon } from '../elements/AnimatedIcon'
 
 export const Header = ({ onAction }: IMainComponentProps) => {
 
@@ -31,7 +30,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
       flex-col py-16
       flex-1 flex md:flex-row md:py-0 items-center md:mt-0 justify-center gap-20
       '>
-        <ReactLogo />
+        <AnimatedIcon img='header-1.png'/>
         <Sidebar sidebarIsOpen={sidebarIsOpen} />
         <div className='flex flex-col gap-4 hover:scale-105 transition-all duration-700'>
           <h1 className='
@@ -54,7 +53,7 @@ export const Header = ({ onAction }: IMainComponentProps) => {
             {tranlations.header.subtitle}
           </span>
         </div>
-        <NodeLogo />
+        <AnimatedIcon img='header2.png'/>
       </main>
 
     </div>

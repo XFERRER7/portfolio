@@ -35,8 +35,17 @@ module.exports = {
       },
       keyframes: {
         eletron: {
-          to: {
-            transform: 'rotate(360deg)',
+          '0%': {
+            transform: 'rotate(0deg) translateY(0)',
+            opacity: '1',
+          },
+          '50%': {
+            transform: 'rotate(180deg) translateY(-10px)',
+            opacity: '0.7',
+          },
+          '100%': {
+            transform: 'rotate(360deg) translateY(0)',
+            opacity: '1',
           }
         },
         node: {
